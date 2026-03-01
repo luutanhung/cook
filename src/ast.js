@@ -188,6 +188,7 @@ export class InfixExpression extends Expression {
 
 export class Boolean extends Expression {
   constructor(token, value) {
+    super();
     this.token = token;
     this.value = value;
   }

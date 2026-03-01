@@ -1,8 +1,7 @@
 import readline from "readline";
-import { Lexer } from "./lexer.js";
-import { TokenType } from "./token.js";
-import { Parser } from "./parser.js";
 import { evaluate } from "./evaluator.js";
+import { Lexer } from "./lexer.js";
+import { Parser } from "./parser.js";
 
 const PROMPT = ">> ";
 

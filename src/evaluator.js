@@ -1,5 +1,10 @@
-import { ExpressionStatement, IntegerLiteral, Program } from "./ast.js";
-import { Integer } from "./object.js";
+import {
+  Boolean as AstBoolean,
+  ExpressionStatement,
+  IntegerLiteral,
+  Program,
+} from "./ast.js";
+import { Integer, Boolean as BooleanObject } from "./object.js";
 
 export function evaluate(node) {
   if (node instanceof Program) {
@@ -12,6 +17,10 @@ export function evaluate(node) {
 
   if (node instanceof IntegerLiteral) {
     return new Integer(node.value);
+  }
+
+  if (node instanceof AstBoolean) {
+    return new BooleanObject(node.value);
   }
 
   return null;
